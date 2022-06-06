@@ -1,0 +1,78 @@
+/******************************************************************** 
+WEB222 – Assignment 05 Part B
+I declare that my assignment is wholly my own work in accordance with Seneca Academic Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assignment for my use. 
+I also declare that no part of this assignment has been distributed to other students. 
+Name: Qian Tang   
+Student ID: 124746207  
+Dated: 2022-03-21  
+********************************************************************/
+.container{
+    display:inline-block;
+    margin: 28px;
+}
+
+body{
+    font-family: "Karma",sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+header h1{
+    background-image: url("header.jpg");
+    background-size: cover;
+    background-color: bisque;
+    height: 150px;
+    color:green;  
+    font-size:50px;
+    font-family:"Inconsolata";
+}
+
+nav ul{
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0px;
+    background-color:green;
+}
+
+nav ul li{
+    display: inline-block; 
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
+    padding: 20px;
+    color:white;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.price{
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.rowBox{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing:border-box;
+    display: inline-block;
+    text-align: center;
+    padding: 0 6px;  
+}
+
+.product{
+    width: 290px;
+    display: inline-block;
+}
+
+footer{
+    padding-top: 16px;
+    padding-bottom: 8px;
+    text-align:center;
+    font-style: italic;
+}

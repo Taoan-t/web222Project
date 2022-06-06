@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Info-- Qian Tang</title>
+        <style></style>
+        <link rel='stylesheet' href='normalize.css' type='text/css' media='screen'>
+        <script src="product.js"></script>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="identity">
+                <img src="logo.jpg" alt="logo">
+                <h1>Fruit Online Store</h1>    
+            </div>
+                             
+        </header>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="honesty.html">Honesty</a>
+                </li>
+                <li class="active">
+                    <a href="product.html">Product</a>
+                </li>
+                <li>
+                    <a href="reflection.html">Reflection</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Prompt for filling in the form -->
+        <div class="prompt">
+            <h2>Please fill in the form below to create a user account.</h2> 
+            <p>Remind: hover over each form option to see the detailed fill-in requirements.</p>  
+        </div>  
+        
+        <form name="signup" method="post" action="https://httpbin.org/post" onsubmit="return validationForm()">                  
+            <!-- Product ID-->
+            <p>
+                <label title="Digit only and 8 characters long (ex, 44455599)">Product ID: </label>
+                <input type="text" pattern="^\d{8}$" required="required">               
+            </p>  
+            <!-- Product Description -->
+            <p>
+                <label title="Must start with a cap, only alphabet allowed and contain at least 20 characters.">Product Description: </label>
+            </p>                              
+            <textarea id="desc" cols="60" rows="6" required="required"></textarea>                    
+            <!-- Price -->
+            <p>
+                <label title="Digit only, decimal not allowed, less than 1000.">Price: </label>
+                <input type="text" pattern="^[1-9][0-9][0-9]$" id="price" required="required"> 
+            </p>               
+            <!-- Supplier Username -->
+            <p>
+                <label title="Must start with an alphabet and have at least 6 characters.">Supplier Username: </label>
+                <input type="text" required="required" id="username">
+            </p>        
+            <!-- Supplier Status -->
+            <p title="Must select at least one of the selection.">Supplier Status: </p>
+            <label> 
+                <input type="checkbox" name="status" value="New Supplier">
+                New Supplier
+            </label> 
+            <br>
+            <label> 
+                <input type="checkbox" name="status" value="Contract Signed">
+                Contract Signed
+            </label> 
+            <br>
+            <label>
+                <input type="checkbox" name="status" value="Quality Tested">
+                Quality Tested
+            </label>               
+            <!-- Supplier Email -->
+            <p>
+                <label>Supplier Email: </label>
+                <input type="email" required="required">
+            </p>
+    
+            <p>
+                <input type="submit" value="  Submit  ">
+                &nbsp;&nbsp;
+                <input type="reset" value="   Clear   "  onclick="clearErrors();">
+            </p>   
+            <!-- Hidden fields -->
+            <input type="hidden" name="lastName" id="lastName" value="Tang">
+            <input type="hidden" name="studentId" id="studentId" value="124746207">
+        </form>
+        <!-- Error display -->          
+        <aside class="errors">
+            <h2>Error messages: </h2>
+            <div id="descError"></div>
+            <div id="nameError"></div>
+            <div id="statusError"></div>          
+        </aside> 
+         <!-- Footer -->
+        <footer>
+            ©2022 - &lt;Fruit Online Store&gt; 
+            <br>
+            <a href="https://github.com/Taoan-t/web222works/blob/main/Final_Assessment/product.html" target="blank">Product Info Github Link</a>
+        </footer>
+    </body>
+</html>
